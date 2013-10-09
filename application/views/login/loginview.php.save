@@ -1,0 +1,45 @@
+<html>
+<head>
+    <?php  $this->load->helper('url'); ?>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="description" content="socius">
+    <meta name="author" content="socius-team">
+
+    <!-- Bootstrap core CSS -->
+    <link href="<?php echo base_url(); ?>/application/views/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="<?php echo base_url(); ?>/application/views/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<h1>Welcome to Socius</h1>
+	<?php
+	$this->load->helper('form');
+	$this->load->helper('html');
+	$attributes = array('class' => 'l_form', 'id' => 'loginformform');
+	echo form_open('login/login/validateuser',$attributes);?>
+
+<img src="<?php echo base_url(); ?>/application/views/login<?php echo br(1);?>/socius.png" alt="socius logo" align="center">
+<label for="exampleInputPassword1">Username</label>
+<input type="text" name="username" id="disabledTextInput" class="form-control" placeholder="username">
+<?php echo br(1);?>
+<label for="exampleInputPassword1">Password</label>
+<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+<?php echo br(1);?>
+<button type="submit" class="btn btn-success">Login</button>
+<?php
+	echo form_close();
+
+?>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="<?php echo base_url(); ?>/application/views/dist/js/jquery.js"></script>
+<script src="<?php echo base_url(); ?>/application/views/dist/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url(); ?>/application/views/dist/js/holder.js"></script>
+</body>
+</html>

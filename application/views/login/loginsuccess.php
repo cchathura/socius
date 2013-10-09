@@ -1,0 +1,4 @@
+YOUR REGISTRATION COMPLETE
+<?php
+
+?>

@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Login Page</title>
+</head>
+<body>
+	<h1>Register for socius</h1>
+	<?php
+/*	$this->load->helper('form');
+	$this->load->helper('html');
+	$attributes = array('class' => 'l_form', 'id' => 'loginformform');
+	echo form_open('login/login/register_user',$attributes);
+	echo form_label('Userna/*me', 'username');
+	$username = array(
+              'name'        => 'username',
+              'id'          => 'username',
+              'value'       => 'usename',
+              'maxlength'   => '20',
+              'size'        => '50',
+              'style'       => 'width:10%',
+            );
+
+	echo form_input($username);
+	echo br(1);
+	echo form_label('Password', 'password');
+	$password = array(
+              'name'        => 'password',
+              'id'          => 'password',
+              'value'       => '',
+              'maxlength'   => '20',
+              'size'        => '50',
+              'style'       => 'width:10%',
+            );
+
+	echo form_password($password);
+	echo br(1);
+        echo form_label('Re-Enter Password', 'password');
+	$re_password = array(
+              'name'        => 're-password',
+              'id'          => 're-password',
+              'value'       => '',
+              'maxlength'   => '20',
+              'size'        => '50',
+              'style'       => 'width:10%',
+            );
+
+	echo form_password($re_password);
+	echo br(1);
+	echo form_submit('mysubmit', 'Register');
+	echo form_close();
+
+*/	?>
+
+<label for="exampleInputPassword1">Username</label>
+<input type="text" name="username" id="disabledTextInput" class="form-control" placeholder="username">
+<?php echo br(1);?>
+<label for="exampleInputPassword1">Password</label>
+<input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+<?php echo br(1);?>
+<label for="exampleInputPassword1">Password</label>
+<input type="password" name="re-password" class="form-control" id="exampleInputPassword1" placeholder="password">
+<?php echo br(1);?>
+<button type="submit" class="btn btn-success">Register</button>
+
+</body>
+</html>

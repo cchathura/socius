@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title></title>
+  
+  
+  
+  <link rel="stylesheet" href="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+  
+  <!-- Extra Codiqa features -->
+  <link rel="stylesheet" href="codiqa.ext.css">
+  
+  <!-- jQuery and jQuery Mobile -->
+  <script src="https://d10ajoocuyu32n.cloudfront.net/jquery-1.9.1.min.js"></script>
+  <script src="https://d10ajoocuyu32n.cloudfront.net/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+  <!-- Extra Codiqa features -->
+  <script src="https://d10ajoocuyu32n.cloudfront.net/codiqa.ext.js"></script>
+  
+  
+  <script type="text/javascript">
+  
+	function checkLogin()
+	{
+	
+		var xmlhttp;
+
+		if (window.XMLHttpRequest) {
+			xmlhttp=new XMLHttpRequest();
+		} else {
+			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	
+		xmlhttp.open("GET","http://localhost/hackthon/validateuser.php",true);
+		xmlhttp.send();
+		document.getElementById("output").innerHTML=xmlhttp.responseText;
+	}
+  
+  </script>
+   
+</head>
+<body>
+<!-- Home -->
+<div data-role="page" id="page1">
+    <div data-role="content">
+        <h1 id="headingSocius">
+            Socius
+        </h1>
+        <form>
+            <div data-role="fieldcontain">
+                <label for="txtUsername">
+                    Username
+                </label>
+                <input name="txtUsername" id="txtUsername" placeholder="" value="" type="text">
+            </div>
+            <div data-role="fieldcontain">
+                <label for="txtPassword">
+                    Password
+                </label>
+                <input name="txtPassword" id="txtPassword" placeholder="" value="" type="password">
+            </div>
+            <input id="btnLogin" type="button" value="Login" onclick="checkLogin()">
+            <div>
+                <a id="btnRegister" href="" data-transition="fade">
+                    Register
+                </a>
+            </div>
+			<div id="output"> This is output DIV</div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

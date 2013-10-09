@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Login Page</title>
+</head>
+<body>
+	<h1>Welcome Register page!</h1>
+width="32" height="32"	<?php
+	$this->load->helper('form');
+	$this->load->helper('html');
+	$attributes = array('class' => 'l_form', 'id' => 'loginformform');
+	echo form_open('login/login/register_user',$attributes);
+	echo form_label('Username', 'username');
+	$username = array(
+              'name'        => 'username',
+              'id'          => 'username',
+              'value'       => 'usename',
+              'maxlength'   => '20',
+              'size'        => '50',
+              'style'       => 'width:10%',
+            );
+
+	echo form_input($username);
+	echo br(1);
+	echo form_label('Password', 'password');
+	$password = array(
+              'name'        => 'password',
+              'id'          => 'password',
+              'value'       => '',
+              'maxlength'   => '20',
+              'size'        => '50',
+              'style'       => 'width:10%',
+            );
+
+	echo form_password($password);
+	echo br(1);
+	
+	echo form_label('Re-Enter Password', 'password');
+	$re_password = array(
+              'name'        => 're-password',
+              'id'          => 're-password',
+              'value'       => '',
+              'maxlength'   => '20',
+              'size'        => '50',
+              'style'       => 'width:10%',
+            );
+
+	echo form_password($re_password);
+	echo br(1);
+	echo form_submit('mysubmit', 'Register');
+	echo form_close();
+
+	?>
+</body>
+</html>
